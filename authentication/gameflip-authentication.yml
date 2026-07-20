@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://gameflip.github.io/gfapi/
+docs: https://gameflip.github.io/gfapi/
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    Custom API-key + TOTP scheme. Every request carries an Authorization header
+    of the form `GFAPI <apikey>:<totp>`, where <totp> is a rotating one-time
+    password derived from the account's TOTP secret. Not OAuth2; there is no
+    scope surface.
+schemes:
+- name: gfapiAuth
+  type: apiKey
+  in: header
+  header_name: Authorization
+  format: 'GFAPI <apikey>:<totp>'
+  totp:
+    algorithm: SHA1
+    digits: 6
+    period_seconds: 30
+  provisioning: >-
+    API keys and TOTP secrets are created/requested in Gameflip account
+    settings, or issued by Gameflip support. Access is Beta and gated to a
+    limited number of developers.
+  sources: [openapi/gameflip-gfapi-openapi.yml]
