@@ -1,0 +1,24 @@
+{
+  "provider": "gameflip",
+  "sources": [
+    "gameflip-account-api-openapi.yml",
+    "gameflip-exchange-api-openapi.yml",
+    "gameflip-listing-api-openapi.yml",
+    "gameflip-profile-api-openapi.yml",
+    "gameflip-steam-bulk-api-openapi.yml",
+    "gameflip-steam-escrow-api-openapi.yml"
+  ],
+  "outputs": [
+    "gameflip-account-api-openapi.yml",
+    "gameflip-exchange-api-openapi.yml",
+    "gameflip-listing-api-openapi.yml",
+    "gameflip-profile-api-openapi.yml",
+    "gameflip-steam-bulk-api-openapi.yml",
+    "gameflip-steam-escrow-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

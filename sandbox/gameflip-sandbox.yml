@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/gameflip/gfapi
+description: >-
+  The official gfapi Node.js client exposes a named environment selector; the
+  base URL is chosen by prefixing the API key/environment. A dedicated test
+  environment host is published alongside production.
+environments:
+- name: production
+  base_url: https://production-gameflip.fingershock.com/api/v1
+- name: test
+  base_url: https://test-gameflip.fingershock.com/api/v1
+  notes: Test/sandbox environment used by the official client's `test` mode.
+- name: development
+  base_url: http://localhost:3000/api/v1
+  notes: Local development target defined by the official client (not a hosted service).
+credentials:
+  notes: >-
+    Sandbox and production both require an API key + TOTP secret issued by
+    Gameflip. No public/shared test credentials or magic test values are
+    published; access is gated through the Beta developer program. Never invent
+    test keys.

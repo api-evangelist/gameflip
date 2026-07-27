@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Gameflip API (GFAPI)
+  version: 1.0.0
+extends: openapi/gameflip-gfapi-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enriched: true
+    x-apievangelist-maturity: beta
+    x-apievangelist-auth: "api-key + TOTP (Authorization: GFAPI <apikey>:<totp>)"
+- target: $.info
+  update:
+    x-apievangelist-pagination: "cursor (next_page; limit default 20 / max 100)"
+- target: $.info
+  update:
+    x-apievangelist-source-docs: "https://gameflip.github.io/gfapi/"

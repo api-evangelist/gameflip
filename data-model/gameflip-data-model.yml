@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: derived
+source: https://gameflip.github.io/gfapi/
+docs: https://gameflip.github.io/gfapi/
+entities:
+- name: Account
+  description: A Gameflip user account (referenced by id or the `me` alias).
+  endpoints: [getMyProfile, getProfile, getMyWalletHistory]
+- name: Profile
+  description: Public profile of an account.
+  endpoints: [getProfile, getMyProfile]
+- name: WalletEntry
+  description: An entry in the account's wallet history.
+  endpoints: [getMyWalletHistory]
+- name: Listing
+  description: >-
+    An item listed for sale (game, in-game item, gift card, account, service).
+    Rich searchable attributes: term, category, platform, genre, upc, digital,
+    status, condition, price, tags, created/updated/expiration.
+  endpoints: [searchListings, createListing, getListing, updateListing, deleteListing, uploadListingPhoto]
+- name: Photo
+  description: A photo attached to a listing (cover and/or listing-page images).
+  endpoints: [uploadListingPhoto]
+- name: Exchange
+  description: A sell/buy record connecting a buyer and seller for a listing.
+  endpoints: [createExchange]
+- name: SteamEscrow
+  description: An escrow record holding Steam item(s).
+  endpoints: [getSteamEscrowHold, getMySteamEscrow, getSteamEscrow]
+- name: SteamBulk
+  description: A bulk listing/escrow of multiple Steam items via one trade offer.
+  endpoints: [getMySteamBulk, createSteamBulk, updateSteamBulk, getSteamBulk]
+relationships:
+- from: Listing
+  to: Account
+  type: belongs_to
+  via: owner
+- from: Listing
+  to: Photo
+  type: has_many
+  via: photo
+- from: Exchange
+  to: Listing
+  type: belongs_to
+  via: listing
+- from: WalletEntry
+  to: Account
+  type: belongs_to
+  via: account
+- from: Profile
+  to: Account
+  type: belongs_to
+  via: id
+- from: SteamBulk
+  to: SteamEscrow
+  type: has_many
+  via: escrow

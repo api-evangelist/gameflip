@@ -1,7 +1,18 @@
 aid: gameflip
 name: Gameflip
-description: Gameflip is a company surfaced as a portfolio company of bullpen-capital and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Gameflip is a digital marketplace where gamers buy and sell games, in-game
+  items, gift cards, game accounts, boosting/coaching gigs, and other digital
+  goods, backed by an escrow-style buyer guarantee and a built-in wallet. For
+  developers and power sellers, Gameflip publishes the GFAPI — a JSON REST API
+  (base path /api/v1) for creating and managing listings, searching the
+  marketplace, running exchanges (sell/buy records), reading account profiles
+  and wallet history, and handling Steam item escrow and bulk trade-offer
+  listings. Requests are authenticated with an API key plus a rotating TOTP
+  one-time password sent in the Authorization header (`GFAPI <apikey>:<totp>`).
+  Access is Beta and gated: API keys and TOTP secrets are issued to selected
+  developers through Gameflip support / account settings. An official Node.js
+  client library (gfapi) with sample code is published by Gameflip.
 url: https://raw.githubusercontent.com/api-evangelist/gameflip/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +20,214 @@ x-backed-by:
 - bullpen-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://gameflip.com/img/app/gf_logo_280x150.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Gaming
+- Marketplace
+- Digital Goods
+- E-Commerce
+- Payments
+- Wallet
+- Listings
+- Steam
+- Gift Cards
+apis:
+- aid: gameflip:gameflip-account-api
+  name: Gameflip Account API
+  description: Account and wallet service.
+  humanURL: https://gameflip.github.io/gfapi/
+  baseURL: https://production-gameflip.fingershock.com/api/v1
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/gameflip-account-api-openapi.yml
+  - type: RateLimits
+    url: rate-limits/gameflip-rate-limits.yml
+  - type: Documentation
+    url: https://gameflip.github.io/gfapi/
+  - type: APIReference
+    url: https://gameflip.github.io/gfapi/
+  - type: Authentication
+    url: authentication/gameflip-authentication.yml
+  - type: Conventions
+    url: conventions/gameflip-conventions.yml
+  - type: ErrorCatalog
+    url: errors/gameflip-error-codes.yml
+  - type: DataModel
+    url: data-model/gameflip-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/gameflip-lifecycle.yml
+  - type: Conformance
+    url: conformance/gameflip-conformance.yml
+  - type: Sandbox
+    url: sandbox/gameflip-sandbox.yml
+- aid: gameflip:gameflip-exchange-api
+  name: Gameflip Exchange API
+  description: Create and manage sell/buy records (exchanges).
+  humanURL: https://gameflip.github.io/gfapi/
+  baseURL: https://production-gameflip.fingershock.com/api/v1
+  tags:
+  - Exchange
+  properties:
+  - type: OpenAPI
+    url: openapi/gameflip-exchange-api-openapi.yml
+  - type: RateLimits
+    url: rate-limits/gameflip-rate-limits.yml
+  - type: Documentation
+    url: https://gameflip.github.io/gfapi/
+  - type: APIReference
+    url: https://gameflip.github.io/gfapi/
+  - type: Authentication
+    url: authentication/gameflip-authentication.yml
+  - type: Conventions
+    url: conventions/gameflip-conventions.yml
+  - type: ErrorCatalog
+    url: errors/gameflip-error-codes.yml
+  - type: DataModel
+    url: data-model/gameflip-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/gameflip-lifecycle.yml
+  - type: Conformance
+    url: conformance/gameflip-conformance.yml
+  - type: Sandbox
+    url: sandbox/gameflip-sandbox.yml
+- aid: gameflip:gameflip-listing-api
+  name: Gameflip Listing API
+  description: Create and manipulate listings of items for sale.
+  humanURL: https://gameflip.github.io/gfapi/
+  baseURL: https://production-gameflip.fingershock.com/api/v1
+  tags:
+  - Listing
+  properties:
+  - type: OpenAPI
+    url: openapi/gameflip-listing-api-openapi.yml
+  - type: RateLimits
+    url: rate-limits/gameflip-rate-limits.yml
+  - type: Documentation
+    url: https://gameflip.github.io/gfapi/
+  - type: APIReference
+    url: https://gameflip.github.io/gfapi/
+  - type: Authentication
+    url: authentication/gameflip-authentication.yml
+  - type: Conventions
+    url: conventions/gameflip-conventions.yml
+  - type: ErrorCatalog
+    url: errors/gameflip-error-codes.yml
+  - type: DataModel
+    url: data-model/gameflip-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/gameflip-lifecycle.yml
+  - type: Conformance
+    url: conformance/gameflip-conformance.yml
+  - type: Sandbox
+    url: sandbox/gameflip-sandbox.yml
+- aid: gameflip:gameflip-profile-api
+  name: Gameflip Profile API
+  description: Account profile service.
+  humanURL: https://gameflip.github.io/gfapi/
+  baseURL: https://production-gameflip.fingershock.com/api/v1
+  tags:
+  - Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/gameflip-profile-api-openapi.yml
+  - type: RateLimits
+    url: rate-limits/gameflip-rate-limits.yml
+  - type: Documentation
+    url: https://gameflip.github.io/gfapi/
+  - type: APIReference
+    url: https://gameflip.github.io/gfapi/
+  - type: Authentication
+    url: authentication/gameflip-authentication.yml
+  - type: Conventions
+    url: conventions/gameflip-conventions.yml
+  - type: ErrorCatalog
+    url: errors/gameflip-error-codes.yml
+  - type: DataModel
+    url: data-model/gameflip-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/gameflip-lifecycle.yml
+  - type: Conformance
+    url: conformance/gameflip-conformance.yml
+  - type: Sandbox
+    url: sandbox/gameflip-sandbox.yml
+- aid: gameflip:gameflip-steam-bulk-api
+  name: Gameflip Steam Bulk API
+  description: Create listings/escrow for multiple Steam items with one trade offer.
+  humanURL: https://gameflip.github.io/gfapi/
+  baseURL: https://production-gameflip.fingershock.com/api/v1
+  tags:
+  - Steam Bulk
+  properties:
+  - type: OpenAPI
+    url: openapi/gameflip-steam-bulk-api-openapi.yml
+  - type: RateLimits
+    url: rate-limits/gameflip-rate-limits.yml
+  - type: Documentation
+    url: https://gameflip.github.io/gfapi/
+  - type: APIReference
+    url: https://gameflip.github.io/gfapi/
+  - type: Authentication
+    url: authentication/gameflip-authentication.yml
+  - type: Conventions
+    url: conventions/gameflip-conventions.yml
+  - type: ErrorCatalog
+    url: errors/gameflip-error-codes.yml
+  - type: DataModel
+    url: data-model/gameflip-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/gameflip-lifecycle.yml
+  - type: Conformance
+    url: conformance/gameflip-conformance.yml
+  - type: Sandbox
+    url: sandbox/gameflip-sandbox.yml
+- aid: gameflip:gameflip-steam-escrow-api
+  name: Gameflip Steam Escrow API
+  description: Escrow Steam items.
+  humanURL: https://gameflip.github.io/gfapi/
+  baseURL: https://production-gameflip.fingershock.com/api/v1
+  tags:
+  - Steam Escrow
+  properties:
+  - type: OpenAPI
+    url: openapi/gameflip-steam-escrow-api-openapi.yml
+  - type: RateLimits
+    url: rate-limits/gameflip-rate-limits.yml
+  - type: Documentation
+    url: https://gameflip.github.io/gfapi/
+  - type: APIReference
+    url: https://gameflip.github.io/gfapi/
+  - type: Authentication
+    url: authentication/gameflip-authentication.yml
+  - type: Conventions
+    url: conventions/gameflip-conventions.yml
+  - type: ErrorCatalog
+    url: errors/gameflip-error-codes.yml
+  - type: DataModel
+    url: data-model/gameflip-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/gameflip-lifecycle.yml
+  - type: Conformance
+    url: conformance/gameflip-conformance.yml
+  - type: Sandbox
+    url: sandbox/gameflip-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +236,38 @@ maintainers:
 common:
 - type: Website
   url: https://gameflip.com
+- type: GettingStarted
+  url: https://gameflip.github.io/gfapi/
+- type: Documentation
+  url: https://gameflip.github.io/gfapi/
+- type: APIReference
+  url: https://gameflip.github.io/gfapi/
+- type: SDKs
+  url: packages/gameflip-packages.yml
+- type: Packages
+  url: packages/gameflip-packages.yml
+- type: GitHubOrganization
+  url: https://github.com/gameflip
+- type: Support
+  url: https://support.gameflip.com/hc/en-us
+- type: Blog
+  url: https://gameflip.com/blog
+- type: SignUp
+  url: https://gameflip.com/login
+- type: TermsOfService
+  url: https://gameflip.com/about/terms
+- type: PrivacyPolicy
+  url: https://gameflip.com/about/privacy
+- type: Authentication
+  url: authentication/gameflip-authentication.yml
+- type: Conventions
+  url: conventions/gameflip-conventions.yml
+- type: DomainSecurity
+  url: security/gameflip-domain-security.yml
+- type: LLMsTxt
+  url: llms/gameflip-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

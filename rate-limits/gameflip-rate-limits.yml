@@ -1,0 +1,15 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/gameflip/gfapi
+kind: client-guidance
+description: >-
+  Gameflip does not document server-side rate-limit response headers. The
+  official gfapi Node.js client enforces a self-throttle of 3 requests per
+  minute (token-bucket), which reflects recommended request pacing during the
+  Beta program.
+rate_limits:
+- name: gfapi-client-default
+  limit_count: 3
+  interval: minute
+  scope: client-enforced
+  source: https://github.com/gameflip/gfapi (RateLimiter tokensPerInterval=3, interval=minute)

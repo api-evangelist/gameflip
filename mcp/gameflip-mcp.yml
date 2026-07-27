@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: openapi/gameflip-gfapi-openapi.yml
+notes: >-
+  No official hosted or published MCP server was found for Gameflip. The
+  following is a candidate tool list derived one-to-one from the documented
+  GFAPI operations, provided as a starting point for an MCP server.
+server:
+  name: gameflip
+  transport: stdio
+tools:
+- name: get_profile
+  description: Get a user's public profile.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#getProfile
+- name: get_my_profile
+  description: Get the authenticated user's profile.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#getMyProfile
+- name: get_my_wallet_history
+  description: Get the authenticated user's wallet history.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#getMyWalletHistory
+- name: search_listings
+  description: Search the marketplace for listings.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#searchListings
+- name: create_listing
+  description: Create a listing.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#createListing
+- name: get_listing
+  description: Get a listing by id.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#getListing
+- name: update_listing
+  description: Update a listing.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#updateListing
+- name: delete_listing
+  description: Delete a listing.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#deleteListing
+- name: upload_listing_photo
+  description: Upload a photo for a listing.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#uploadListingPhoto
+- name: create_exchange
+  description: Create an exchange (sell/buy record).
+  source_operation: openapi/gameflip-gfapi-openapi.yml#createExchange
+- name: get_my_steam_escrow
+  description: List my Steam escrows.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#getMySteamEscrow
+- name: create_steam_bulk
+  description: Create a Steam bulk trade-offer listing.
+  source_operation: openapi/gameflip-gfapi-openapi.yml#createSteamBulk

@@ -1,0 +1,50 @@
+generated: '2026-07-19'
+method: searched
+source: https://gameflip.github.io/gfapi/
+docs: https://gameflip.github.io/gfapi/
+authentication:
+  style: api-key + TOTP
+  header: 'Authorization: GFAPI <apikey>:<totp>'
+  see: authentication/gameflip-authentication.yml
+base_path:
+  scheme: uri-path
+  value: /api/v1
+response_envelope:
+  description: >-
+    Every response with a body is a JSON document with at least a `status`
+    field (SUCCESS or FAILURE). Payload rides in `data` (a single object or an
+    array of objects). Failures include an `error` object with `message` and
+    numeric `code`.
+  fields:
+    status: SUCCESS | FAILURE
+    data: object | array | null
+    error: { message: string, code: integer }
+  see: errors/gameflip-error-codes.yml
+pagination:
+  style: cursor
+  request_params:
+    limit: { default: 20, max: 100 }
+  response_fields:
+    next_page: >-
+      Cursor URL for the next page; null/absent when there are no more results.
+    data: Array of result objects for the current page.
+  ordering:
+    param: sort
+    format: 'array of fieldname:direction (asc|desc)'
+    default: '_score:desc,created:desc'
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key mechanism is documented. Listing updates use PATCH with a
+    JSON Patch body; deletes are DELETE by id.
+rate_limiting:
+  documented_server_headers: false
+  client_guidance: >-
+    The official gfapi Node.js client self-throttles to 3 requests per minute
+    (token-bucket), reflecting recommended request pacing during Beta. No
+    server-side rate-limit headers are documented.
+  see: rate-limits/gameflip-rate-limits.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  see: lifecycle/gameflip-lifecycle.yml

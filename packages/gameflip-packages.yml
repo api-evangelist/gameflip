@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/gameflip/gfapi
+packages:
+- language: javascript
+  registry: npm
+  name: gfapi
+  url: https://www.npmjs.com/package/gfapi
+  install: npm install gfapi
+  official: true
+  version: 0.1.1
+  description: >-
+    Official Node.js bindings and sample code for the Gameflip API (GFAPI).
+    Maintained in the Gameflip GitHub organization; also installable directly
+    from GitHub with `npm install gameflip/gfapi`.
+  repository: https://github.com/gameflip/gfapi

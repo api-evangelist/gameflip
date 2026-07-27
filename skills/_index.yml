@@ -1,0 +1,12 @@
+generated: '2026-07-19'
+method: generated
+source: openapi/gameflip-gfapi-openapi.yml
+skills:
+- file: gameflip-create-and-sell.md
+  name: Create a listing and put it up for sale
+  api: openapi/gameflip-gfapi-openapi.yml
+  operations: [getMyProfile, createListing, uploadListingPhoto, searchListings]
+- file: gameflip-search-and-buy.md
+  name: Search the marketplace and buy via an exchange
+  api: openapi/gameflip-gfapi-openapi.yml
+  operations: [searchListings, getListing, createExchange]

@@ -1,0 +1,23 @@
+# Gameflip
+
+> Gameflip is a digital marketplace for buying and selling games, in-game items, gift cards, game accounts, and gaming services, with escrow-style buyer protection and a built-in wallet. The Gameflip API (GFAPI) is a JSON REST API (base path /api/v1) for managing listings, searching the marketplace, running exchanges, reading account/wallet data, and handling Steam item escrow and bulk trade-offer listings. Auth is an API key plus a rotating TOTP one-time password sent in the Authorization header (`GFAPI <apikey>:<totp>`); access is Beta and gated through Gameflip account settings.
+
+## APIs
+- [Gameflip API (GFAPI)](https://gameflip.github.io/gfapi/): REST API for listings, exchanges, account/wallet, and Steam escrow/bulk. Base URL https://production-gameflip.fingershock.com/api/v1
+
+## Specs
+- [OpenAPI (transcribed from docs)](openapi/gameflip-gfapi-openapi.yml)
+
+## Docs
+- [GFAPI Reference](https://gameflip.github.io/gfapi/)
+- [Authentication](authentication/gameflip-authentication.yml)
+- [Conventions (pagination, envelope, versioning)](conventions/gameflip-conventions.yml)
+- [Error codes](errors/gameflip-error-codes.yml)
+- [Data model](data-model/gameflip-data-model.yml)
+- [Sandbox / environments](sandbox/gameflip-sandbox.yml)
+- [Node.js SDK (gfapi)](https://github.com/gameflip/gfapi)
+- [Support / Help Center](https://support.gameflip.com/hc/en-us)
+
+## Tools
+- [Agent Skills](skills/_index.yml)
+- [MCP server (candidate)](mcp/gameflip-mcp.yml)

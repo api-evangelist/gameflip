@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://gameflip.github.io/gfapi/
+format: custom-envelope
+envelope:
+  description: >-
+    Failures return a JSON document with status FAILURE, data null, and an
+    error object carrying a human-readable message and a numeric code (which
+    mirrors the HTTP status).
+  shape:
+    status: FAILURE
+    data: null
+    error: { message: string, code: integer }
+errors:
+- code: 400
+  http_status: 400
+  title: Bad Request
+  meaning: >-
+    Request was malformed or failed validation (e.g. invalid listing fields,
+    bad filter/sort parameters). This is the example failure documented in the
+    GFAPI reference.
+  source: https://gameflip.github.io/gfapi/
+- code: 401
+  http_status: 401
+  title: Unauthorized
+  meaning: >-
+    Missing or invalid Authorization header, or an expired/incorrect TOTP.
+    Verify the `GFAPI <apikey>:<totp>` header and that the TOTP is current.
+  source: derived-from-auth
+- code: 404
+  http_status: 404
+  title: Not Found
+  meaning: Referenced resource (listing, exchange, escrow) does not exist.
+  source: derived-from-openapi
+notes: >-
+  Gameflip publishes a common error envelope rather than an RFC 9457
+  problem+json catalog; the numeric `error.code` follows the HTTP status. The
+  400 example is documented verbatim in the GFAPI reference; 401/404 are
+  derived from the documented auth scheme and REST resource model.

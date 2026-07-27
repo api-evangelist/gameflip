@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: https://gameflip.github.io/gfapi/
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://gameflip.github.io/gfapi/
+maturity: beta
+maturity_notes: >-
+  The GFAPI is published as a Beta program. Developer access (API keys + TOTP
+  secrets) is gated and issued to a limited number of developers via account
+  settings / Gameflip support.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No deprecation policy or Sunset/Deprecation header support is documented.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

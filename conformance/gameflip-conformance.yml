@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/gameflip-gfapi-openapi.yml
+standards:
+- id: oauth2
+  conforms: false
+  evidence: Auth is a custom API-key + TOTP header scheme, not OAuth2.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use a custom {status,data,error} envelope, not application/problem+json.
+- id: cursor-pagination
+  conforms: true
+  evidence: List responses carry a next_page cursor with limit (default 20, max 100).
+- id: rest-json
+  conforms: true
+  evidence: JSON over HTTPS with resource-oriented paths and standard verbs (GET/POST/PATCH/PUT/DELETE).
+- id: json-patch
+  conforms: true
+  evidence: PATCH /listing/:id applies a JSON Patch update body.
+- id: totp-rfc6238
+  conforms: true
+  evidence: Request signing uses TOTP (SHA1, 6 digits, 30s period) per RFC 6238.
