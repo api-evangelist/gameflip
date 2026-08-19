@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gameflip API (GFAPI) Account Steam Escrow API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Steam Escrow",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Steam escrow hold status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/steam/escrow/hold"
+          },
+          "docs": "Get Steam escrow hold status"
+        },
+        {
+          "info": {
+            "name": "Get my Steam escrows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/steam/escrow/mine"
+          },
+          "docs": "Get my Steam escrows"
+        },
+        {
+          "info": {
+            "name": "Get a Steam escrow by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/steam/escrow/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a Steam escrow by id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

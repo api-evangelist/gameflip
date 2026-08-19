@@ -2,10 +2,9 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: openapi/gameflip-gfapi-openapi.yml
-notes: >-
-  No official hosted or published MCP server was found for Gameflip. The
-  following is a candidate tool list derived one-to-one from the documented
-  GFAPI operations, provided as a starting point for an MCP server.
+notes: No official hosted or published MCP server was found for Gameflip. The following is a candidate
+  tool list derived one-to-one from the documented GFAPI operations, provided as a starting point for
+  an MCP server.
 server:
   name: gameflip
   transport: stdio
@@ -46,3 +45,9 @@ tools:
 - name: create_steam_bulk
   description: Create a Steam bulk trade-offer listing.
   source_operation: openapi/gameflip-gfapi-openapi.yml#createSteamBulk
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census

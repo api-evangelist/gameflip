@@ -1,0 +1,445 @@
+{
+  "item": [
+    {
+      "id": "a020c17b-4a53-4183-8b37-06cf895a40fd",
+      "name": "Steam Escrow",
+      "description": {
+        "content": "Escrow Steam items.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f0ef020-a9dc-492e-a0d1-44dbfe87294c",
+          "name": "Get Steam escrow hold status",
+          "request": {
+            "name": "Get Steam escrow hold status",
+            "description": {},
+            "url": {
+              "path": [
+                "steam",
+                "escrow",
+                "hold"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9a4ce62f-6301-49a1-8f75-ce681805082b",
+              "name": "Escrow hold",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "steam",
+                    "escrow",
+                    "hold"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"SUCCESS\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "58ff4fe1-acdd-496c-8532-7602487db555",
+              "name": "Failure response using the common GFAPI envelope",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "steam",
+                    "escrow",
+                    "hold"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {},\n  \"error\": {\n    \"message\": \"string\",\n    \"code\": 7925\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c212620a-7389-4cda-bd4f-c2e1a9c819be",
+          "name": "Get my Steam escrows",
+          "request": {
+            "name": "Get my Steam escrows",
+            "description": {},
+            "url": {
+              "path": [
+                "steam",
+                "escrow",
+                "mine"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "42ccb22a-437b-484d-9965-f74b2b35cc6b",
+              "name": "Escrows",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "steam",
+                    "escrow",
+                    "mine"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"next_page\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "79c12bf4-195d-4949-a269-bbab3b240116",
+              "name": "Failure response using the common GFAPI envelope",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "steam",
+                    "escrow",
+                    "mine"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {},\n  \"error\": {\n    \"message\": \"string\",\n    \"code\": 7925\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2ff75dc6-a426-4268-b808-38efba47ac52",
+          "name": "Get a Steam escrow by id",
+          "request": {
+            "name": "Get a Steam escrow by id",
+            "description": {},
+            "url": {
+              "path": [
+                "steam",
+                "escrow",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9a49af7f-5390-4c14-a6d2-9c0d3d5a97ac",
+              "name": "Escrow",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "steam",
+                    "escrow",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"SUCCESS\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "66650eeb-367b-494f-903a-3de92fc690fb",
+              "name": "Failure response using the common GFAPI envelope",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "steam",
+                    "escrow",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {},\n  \"error\": {\n    \"message\": \"string\",\n    \"code\": 7925\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://production-gameflip.fingershock.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cf0dc9e5-0ec5-43a7-abd7-d2cd91afa865",
+    "name": "Gameflip API (GFAPI) Account Steam Escrow API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "JSON REST API for the Gameflip marketplace, transcribed faithfully from the published GFAPI documentation (https://gameflip.github.io/gfapi/) and the official Node.js client (https://github.com/gameflip/gfapi). Covers listing management and search, exchanges, account profile and wallet history, and Steam item escrow / bulk trade-offer listings. This spec captures the documented endpoints, methods, auth scheme, query parameters, and the common response envelope; request/response object bodies are represented as the generic GfResponse envelope because Gameflip does not publish per-object JSON Schemas.\n\nContact Support:\n Name: Gameflip Support",
+      "type": "text/plain"
+    }
+  }
+}

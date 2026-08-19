@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gameflip API (GFAPI) Account Exchange API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Exchange",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an exchange (sell/buy record)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://production-gameflip.fingershock.com/api/v1/exchange",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an exchange (sell/buy record)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

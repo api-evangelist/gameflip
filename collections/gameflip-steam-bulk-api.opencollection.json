@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gameflip API (GFAPI) Account Steam Bulk API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Steam Bulk",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get my Steam bulk trade-offer listings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/steam/bulk/mine"
+          },
+          "docs": "Get my Steam bulk trade-offer listings"
+        },
+        {
+          "info": {
+            "name": "Create a Steam bulk trade-offer listing",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://production-gameflip.fingershock.com/api/v1/steam/bulk",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a Steam bulk trade-offer listing"
+        },
+        {
+          "info": {
+            "name": "Get a Steam bulk listing by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/steam/bulk/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a Steam bulk listing by id"
+        },
+        {
+          "info": {
+            "name": "Update a Steam bulk listing",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://production-gameflip.fingershock.com/api/v1/steam/bulk/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a Steam bulk listing"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

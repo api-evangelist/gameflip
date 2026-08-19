@@ -1,0 +1,321 @@
+{
+  "item": [
+    {
+      "id": "94a28c94-850b-406e-a93b-10ebb46054a0",
+      "name": "Profile",
+      "description": {
+        "content": "Account profile service.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f433fb6a-d9b5-48e7-8fda-fead9a423893",
+          "name": "Get a user's public profile",
+          "request": {
+            "name": "Get a user's public profile",
+            "description": {},
+            "url": {
+              "path": [
+                "account",
+                ":id",
+                "profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9eb51ab7-41e1-4e4e-a8f7-dd231b56f346",
+              "name": "Profile",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    ":id",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ca59d7f1-3962-4c5f-af2f-6b2d4aab834b",
+              "name": "Failure response using the common GFAPI envelope",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    ":id",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {},\n  \"error\": {\n    \"message\": \"string\",\n    \"code\": 381\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd1482f4-d9cb-4f9a-a390-ff8bffbcbd83",
+          "name": "Get the authenticated user's profile",
+          "request": {
+            "name": "Get the authenticated user's profile",
+            "description": {},
+            "url": {
+              "path": [
+                "account",
+                "me",
+                "profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dab5e513-2860-4b16-896f-d8a96224fe3b",
+              "name": "Profile",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "me",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ac9f8169-cff4-4d9d-8007-37b25b861376",
+              "name": "Failure response using the common GFAPI envelope",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "me",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {},\n  \"error\": {\n    \"message\": \"string\",\n    \"code\": 381\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://production-gameflip.fingershock.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e9ddb38c-92a5-4dc8-ad54-875489b5a8fa",
+    "name": "Gameflip API (GFAPI) Account Profile API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "JSON REST API for the Gameflip marketplace, transcribed faithfully from the published GFAPI documentation (https://gameflip.github.io/gfapi/) and the official Node.js client (https://github.com/gameflip/gfapi). Covers listing management and search, exchanges, account profile and wallet history, and Steam item escrow / bulk trade-offer listings. This spec captures the documented endpoints, methods, auth scheme, query parameters, and the common response envelope; request/response object bodies are represented as the generic GfResponse envelope because Gameflip does not publish per-object JSON Schemas.\n\nContact Support:\n Name: Gameflip Support",
+      "type": "text/plain"
+    }
+  }
+}

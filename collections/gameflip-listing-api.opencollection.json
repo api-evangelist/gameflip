@@ -1,0 +1,222 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gameflip API (GFAPI) Account Listing API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Listing",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for listings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/listing",
+            "params": [
+              {
+                "name": "term",
+                "value": "",
+                "type": "query",
+                "description": "Fuzzy search over name and description; generates relevance score."
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "platform",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "genre",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "upc",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "shipping_paid_by",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "digital",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "owner",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "condition",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "price",
+                "value": "",
+                "type": "query",
+                "description": "Range filter on integer price (cents)."
+              },
+              {
+                "name": "created",
+                "value": "",
+                "type": "query",
+                "description": "Date range filter."
+              },
+              {
+                "name": "updated",
+                "value": "",
+                "type": "query",
+                "description": "Date range filter."
+              },
+              {
+                "name": "expiration",
+                "value": "",
+                "type": "query",
+                "description": "Date range filter."
+              },
+              {
+                "name": "tags",
+                "value": "",
+                "type": "query",
+                "description": "Term filter supporting OR (comma) and AND (^)."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Array of fieldname:direction (asc|desc). Default _score:desc,created:desc."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search for listings. Response is paginated and ordered. Default filter selects listings with status onsale or sold and not expired. Filter type `term` selects any listing whose property equals any provided value; `tags` additionally supports logical AND via the `^` operator."
+        },
+        {
+          "info": {
+            "name": "Create a listing",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://production-gameflip.fingershock.com/api/v1/listing",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a listing"
+        },
+        {
+          "info": {
+            "name": "Get a listing by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/listing/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a listing by id"
+        },
+        {
+          "info": {
+            "name": "Update a listing (JSON Patch)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://production-gameflip.fingershock.com/api/v1/listing/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a listing (JSON Patch)"
+        },
+        {
+          "info": {
+            "name": "Delete a listing",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://production-gameflip.fingershock.com/api/v1/listing/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a listing"
+        },
+        {
+          "info": {
+            "name": "Upload a photo for a listing",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://production-gameflip.fingershock.com/api/v1/listing/:id/photo",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upload a photo for a listing"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

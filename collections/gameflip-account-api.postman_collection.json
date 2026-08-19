@@ -1,0 +1,173 @@
+{
+  "item": [
+    {
+      "id": "b68d33db-72b7-4534-9e26-a9d1a83356c4",
+      "name": "Account",
+      "description": {
+        "content": "Account and wallet service.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9a33a6fe-b743-478c-864a-04816894579d",
+          "name": "Get the authenticated user's wallet history",
+          "request": {
+            "name": "Get the authenticated user's wallet history",
+            "description": {},
+            "url": {
+              "path": [
+                "account",
+                "me",
+                "wallet_history"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8f43aeb0-971c-44f3-b1ed-5b62509d9313",
+              "name": "Wallet history",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "me",
+                    "wallet_history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6e1a1e08-93b9-4d4b-8f83-d1bff84b2a62",
+              "name": "Failure response using the common GFAPI envelope",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "me",
+                    "wallet_history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {},\n  \"error\": {\n    \"message\": \"string\",\n    \"code\": 5224\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://production-gameflip.fingershock.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "66466f67-0fcd-4ec8-a4c4-129965a62f57",
+    "name": "Gameflip API (GFAPI) Account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "JSON REST API for the Gameflip marketplace, transcribed faithfully from the published GFAPI documentation (https://gameflip.github.io/gfapi/) and the official Node.js client (https://github.com/gameflip/gfapi). Covers listing management and search, exchanges, account profile and wallet history, and Steam item escrow / bulk trade-offer listings. This spec captures the documented endpoints, methods, auth scheme, query parameters, and the common response envelope; request/response object bodies are represented as the generic GfResponse envelope because Gameflip does not publish per-object JSON Schemas.\n\nContact Support:\n Name: Gameflip Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "item": [
+    {
+      "id": "461f9b0c-d47d-4b84-9e82-8b54e6000c66",
+      "name": "Exchange",
+      "description": {
+        "content": "Create and manage sell/buy records (exchanges).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "72ac5d24-6631-43ac-97fb-467d6528038c",
+          "name": "Create an exchange (sell/buy record)",
+          "request": {
+            "name": "Create an exchange (sell/buy record)",
+            "description": {},
+            "url": {
+              "path": [
+                "exchange"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ff836fd4-c7f3-43f8-8b98-c0221503a9f2",
+              "name": "Created exchange",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "exchange"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f5a3a6cd-e343-434b-932d-c8e63f131b67",
+              "name": "Failure response using the common GFAPI envelope",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "exchange"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"FAILURE\",\n  \"data\": {},\n  \"error\": {\n    \"message\": \"string\",\n    \"code\": 6920\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://production-gameflip.fingershock.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ffc203ee-443a-4613-838c-bcc62b3975bf",
+    "name": "Gameflip API (GFAPI) Account Exchange API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "JSON REST API for the Gameflip marketplace, transcribed faithfully from the published GFAPI documentation (https://gameflip.github.io/gfapi/) and the official Node.js client (https://github.com/gameflip/gfapi). Covers listing management and search, exchanges, account profile and wallet history, and Steam item escrow / bulk trade-offer listings. This spec captures the documented endpoints, methods, auth scheme, query parameters, and the common response envelope; request/response object bodies are represented as the generic GfResponse envelope because Gameflip does not publish per-object JSON Schemas.\n\nContact Support:\n Name: Gameflip Support",
+      "type": "text/plain"
+    }
+  }
+}

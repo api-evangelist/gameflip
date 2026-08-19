@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gameflip API (GFAPI) Account Profile API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Profile",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a user's public profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/account/:id/profile",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a user's public profile"
+        },
+        {
+          "info": {
+            "name": "Get the authenticated user's profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/account/me/profile"
+          },
+          "docs": "Get the authenticated user's profile"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

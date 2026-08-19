@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gameflip API (GFAPI) Account API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the authenticated user's wallet history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://production-gameflip.fingershock.com/api/v1/account/me/wallet_history"
+          },
+          "docs": "Get the authenticated user's wallet history"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
