@@ -140,6 +140,8 @@ apis:
   humanURL: https://gameflip.github.io/gfapi/
   baseURL: https://production-gameflip.fingershock.com/api/v1
   tags:
+  - Listings
+  tags_raw:
   - Listing
   properties:
   - type: OpenAPI
@@ -170,6 +172,8 @@ apis:
   humanURL: https://gameflip.github.io/gfapi/
   baseURL: https://production-gameflip.fingershock.com/api/v1
   tags:
+  - Profiles
+  tags_raw:
   - Profile
   properties:
   - type: OpenAPI
