@@ -1,12 +1,7 @@
 {
   "provider": "gameflip",
   "sources": [
-    "gameflip-account-api-openapi.yml",
-    "gameflip-exchange-api-openapi.yml",
-    "gameflip-listing-api-openapi.yml",
-    "gameflip-profile-api-openapi.yml",
-    "gameflip-steam-bulk-api-openapi.yml",
-    "gameflip-steam-escrow-api-openapi.yml"
+    "_original/gameflip-gfapi-openapi.yml"
   ],
   "outputs": [
     "gameflip-account-api-openapi.yml",
@@ -19,6 +14,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "gameflip-gfapi-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "gameflip-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gameflip-exchange-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gameflip-listing-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gameflip-profile-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gameflip-steam-bulk-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gameflip-steam-escrow-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
