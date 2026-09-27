@@ -234,6 +234,20 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   schemas:
+    GfResponse:
+      type: object
+      description: Common GFAPI success envelope carrying a single object.
+      required:
+      - status
+      properties:
+        status:
+          type: string
+          enum:
+          - SUCCESS
+          - FAILURE
+        data:
+          type: object
+          nullable: true
     GfError:
       type: object
       description: Common GFAPI failure envelope.
@@ -253,20 +267,6 @@ components:
               type: string
             code:
               type: integer
-    GfResponse:
-      type: object
-      description: Common GFAPI success envelope carrying a single object.
-      required:
-      - status
-      properties:
-        status:
-          type: string
-          enum:
-          - SUCCESS
-          - FAILURE
-        data:
-          type: object
-          nullable: true
     GfListResponse:
       type: object
       description: Common GFAPI success envelope carrying a list plus a cursor.
