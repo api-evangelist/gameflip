@@ -34,6 +34,13 @@ paths:
         4XX:
           $ref: '#/components/responses/Error'
 components:
+  responses:
+    Error:
+      description: Failure response using the common GFAPI envelope
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GfError'
   schemas:
     GfResponse:
       type: object
@@ -68,13 +75,6 @@ components:
               type: string
             code:
               type: integer
-  responses:
-    Error:
-      description: Failure response using the common GFAPI envelope
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GfError'
   securitySchemes:
     gfapiAuth:
       type: apiKey
