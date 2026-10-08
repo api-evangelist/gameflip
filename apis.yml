@@ -264,6 +264,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: RateLimits
+  url: rate-limits/gameflip-rate-limits.yml
 - type: AgentSkill
   url: skills/gameflip-create-and-sell.md
 - type: X-MCPServerCandidate
