@@ -64,6 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Gameflip is a company surfaced as a portfolio company of bullpen-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Gameflip is a digital marketplace where gamers buy and sell games, in-game items, gift cards, game accounts, boosting/coaching gigs, and other digital goods, backed by an escrow-style buyer guarantee and a built-in wallet. For developers and power sellers, Gameflip publishes the GFAPI — a JSON REST API (base path /api/v1) for creating and managing listings, searching the marketplace, running exchanges (sell/buy records), reading account profiles and wallet history, and handling Steam item escrow and bulk trade-offer listings. Requests are authenticated with an API key plus a rotating TOTP one-time password sent in the Authorization header (`GFAPI <apikey>:<totp>`). Access is Beta and gated: API keys and TOTP secrets are issued to selected developers through Gameflip support / account settings. An official Node.js client library (gfapi) with sample code is published by Gameflip.
 
-Backed by: bullpen-capital — https://gameflip.com
+**Areas:** Company · Gaming · Marketplace · Digital Goods · E-Commerce · Payments · Wallets · Listings · Steam · Gift Cards
+
+## Gameflip on APIs.io
+
+Everything profiled for Gameflip is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/gameflip/](https://apis.io/providers/gameflip/)** — or go straight to one of the APIs or properties below.
+
+### APIs (6)
+
+- [Gameflip Account API](https://apis.io/apis/gameflip/gameflip-account-api/) — Account and wallet service.
+- [Gameflip Exchange API](https://apis.io/apis/gameflip/gameflip-exchange-api/) — Create and manage sell/buy records (exchanges).
+- [Gameflip Listing API](https://apis.io/apis/gameflip/gameflip-listing-api/) — Create and manipulate listings of items for sale.
+- [Gameflip Profile API](https://apis.io/apis/gameflip/gameflip-profile-api/) — Account profile service.
+- [Gameflip Steam Bulk API](https://apis.io/apis/gameflip/gameflip-steam-bulk-api/) — Create listings/escrow for multiple Steam items with one trade offer.
+- [Gameflip Steam Escrow API](https://apis.io/apis/gameflip/gameflip-steam-escrow-api/) — Escrow Steam items.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [gameflip](https://apis.io/servers/gameflip/gameflip/)
+
+#### Collections (6)
+
+Postman and Open Collection request collections.
+
+- [Gameflip API (GFAPI) Account API](https://apis.io/collections/gameflip/open-gameflip-account-api/)
+- [Gameflip API (GFAPI) Account Exchange API](https://apis.io/collections/gameflip/open-gameflip-exchange-api/)
+- [Gameflip API (GFAPI) Account Listing API](https://apis.io/collections/gameflip/open-gameflip-listing-api/)
+- [Gameflip API (GFAPI) Account Profile API](https://apis.io/collections/gameflip/open-gameflip-profile-api/)
+- [Gameflip API (GFAPI) Account Steam Bulk API](https://apis.io/collections/gameflip/open-gameflip-steam-bulk-api/)
+- [Gameflip API (GFAPI) Account Steam Escrow API](https://apis.io/collections/gameflip/open-gameflip-steam-escrow-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Gameflip Gfapi Overlay](https://apis.io/overlays/gameflip/gameflip-gfapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Gameflip Authentication](https://apis.io/security/gameflip/gameflip-authentication/)
+- [Gameflip Domain Security](https://apis.io/security/gameflip/gameflip-domain-security/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Gameflip Rate Limits](https://apis.io/rate-limits/gameflip/gameflip-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://gameflip.com)
+- [Documentation](https://gameflip.github.io/gfapi/)
+- [Getting started](https://gameflip.github.io/gfapi/)
+- [API reference](https://gameflip.github.io/gfapi/)
+- [Sign up](https://gameflip.com/login)
+- [Support](https://support.gameflip.com/hc/en-us)
+- [Blog](https://gameflip.com/blog)
+- [Terms of service](https://gameflip.com/about/terms)
+- [Privacy policy](https://gameflip.com/about/privacy)
+- [GitHub](https://github.com/gameflip)
+
+## API Evangelist rating
+
+**Kin Score 34.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 16.7 |
+| Contract governance | 4.5 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 63.7 |
+| Access clarity | 34.2 |
+
+**Agent readiness 21.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/gameflip/](https://apis.io/providers/gameflip/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Gameflip: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/gameflip/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
